@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Screen Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="brand">
+            <span class="brand-logo">●</span>
+            <span class="brand-text">Smart Screen Recorder</span>
+        </div>
+        <div class="mode-toggle">
+            <label>
+                <input type="checkbox" id="screen-mode-toggle">
+                <span>Capture screen instead of camera</span>
+            </label>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <section class="preview-section">
+            <div class="vid-container">
+                <video autoplay playsinline controls src=""></video>
+                <div class="status-bar">
+                    <span class="status-indicator status-idle">Idle</span>
+                    <span class="permission-status"></span>
+                </div>
+            </div>
+
+            <div class="action-cont">
+                <div class="record-btn-cont" title="Start/Stop recording">
+                    <div class="record-btn"></div>
+                </div>
+                <div class="capture-btn-cont" title="Capture a screenshot">
+                    <div class="capture-btn"></div>
+                </div>
+                <div class="audio-toggle">
+                    <label>
+                        <input type="checkbox" id="audio-toggle" checked>
+                        Record audio
+                    </label>
+                </div>
+            </div>
+
+            <div class="timer-cont">
+                <h1 class="timer">00:00:00</h1>
+            </div>
+
+            <div class="filter-cont">
+                <h3 class="filter-title">Filters</h3>
+                <div class="filter-list">
+                    <div class="filter orange"></div>
+                    <div class="filter brown"></div>
+                    <div class="filter pink"></div>
+                    <div class="filter transparent"></div>
+                </div>
+            </div>
+
+            <div class="filter-layer"></div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Recording & Snapshot History</h2>
+            <p class="gallery-hint">Your recent recordings and screenshots will appear here. You can download or preview them anytime.</p>
+            <div class="gallery-list" id="gallery-list">
+                <!-- Items added via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <span>Built with MediaRecorder API · Optimized for modern browsers</span>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
